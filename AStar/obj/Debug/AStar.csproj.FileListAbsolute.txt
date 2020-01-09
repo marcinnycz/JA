@@ -1,0 +1,10 @@
+C:\Users\mnycz\source\repos\AStar\AStar\bin\Debug\AStar.exe.config
+C:\Users\mnycz\source\repos\AStar\AStar\bin\Debug\AStar.exe
+C:\Users\mnycz\source\repos\AStar\AStar\bin\Debug\AStar.pdb
+C:\Users\mnycz\source\repos\AStar\AStar\obj\Debug\AStar.csprojAssemblyReference.cache
+C:\Users\mnycz\source\repos\AStar\AStar\obj\Debug\AStar.MainWindow.resources
+C:\Users\mnycz\source\repos\AStar\AStar\obj\Debug\AStar.Properties.Resources.resources
+C:\Users\mnycz\source\repos\AStar\AStar\obj\Debug\AStar.csproj.GenerateResource.cache
+C:\Users\mnycz\source\repos\AStar\AStar\obj\Debug\AStar.exe
+C:\Users\mnycz\source\repos\AStar\AStar\obj\Debug\AStar.pdb
+C:\Users\mnycz\source\repos\AStar\AStar\obj\Debug\AStar.Result.resources

@@ -1,0 +1,21 @@
+﻿  pch.cpp
+  dllmain.cpp
+     Creating library C:\Users\mnycz\source\repos\AStar\Debug\AStarCpp.lib and object C:\Users\mnycz\source\repos\AStar\Debug\AStarCpp.exp
+dllmain.obj : error LNK2019: unresolved external symbol __RTC_CheckEsp referenced in function _DllMain@12
+dllmain.obj : error LNK2001: unresolved external symbol __RTC_InitBase
+dllmain.obj : error LNK2001: unresolved external symbol __RTC_Shutdown
+LINK : error LNK2001: unresolved external symbol __DllMainCRTStartup@12
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\kernel32.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\user32.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\gdi32.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\winspool.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\comdlg32.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\advapi32.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\shell32.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\ole32.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\oleaut32.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\uuid.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\odbc32.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64\odbccp32.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\lib\x64\MSVCRTD.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Users\mnycz\source\repos\AStar\Debug\AStarCpp.dll : fatal error LNK1120: 4 unresolved externals

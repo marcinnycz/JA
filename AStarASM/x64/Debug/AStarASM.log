@@ -1,5 +1,5 @@
 ﻿  Assembling main.asm...
   pch.cpp
   dllmain.cpp
-     Creating library C:\Users\mnycz\source\repos\AStar\x64\Debug\AStarASM.lib and object C:\Users\mnycz\source\repos\AStar\x64\Debug\AStarASM.exp
-  AStarASM.vcxproj -> C:\Users\mnycz\source\repos\AStar\x64\Debug\AStarASM.dll
+     Creating library C:\Users\mnycz\source\repos\JA\x64\Debug\AStarASM.lib and object C:\Users\mnycz\source\repos\JA\x64\Debug\AStarASM.exp
+  AStarASM.vcxproj -> C:\Users\mnycz\source\repos\JA\x64\Debug\AStarASM.dll

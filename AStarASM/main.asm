@@ -1,10 +1,6 @@
-_DATA SEGMENT
-_DATA ENDS
-_TEXT SEGMENT
-_TEXT ENDS
+PUBLIC calculateDistanceASM
 
 .code 
-PUBLIC calculateDistanceASM
 
 calculateDistanceASM PROC
 
@@ -23,6 +19,15 @@ r9_is_bigger:
     xchg rDx, r9
 
     sub rdx, r9
+
+    cmp  rcx, rdx
+    jb   rdx_is_bigger2
+    xchg rcx, rdx
+rdx_is_bigger2:
+    xchg rcx, rdx
+
+    sub rcx, rdx
+
 
 	mov rax, 0
 	add rax, rcx

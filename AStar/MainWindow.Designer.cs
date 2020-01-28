@@ -35,35 +35,42 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.threadLabel = new System.Windows.Forms.Label();
-            this.testLabel = new System.Windows.Forms.Label();
-            this.testButton = new System.Windows.Forms.Button();
+            this.optionsGroupBox = new System.Windows.Forms.GroupBox();
+            this.folderPathTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.optionsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // openButton
             // 
-            this.openButton.Location = new System.Drawing.Point(248, 208);
+            this.openButton.AutoSize = true;
+            this.openButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.openButton.Location = new System.Drawing.Point(214, 23);
             this.openButton.Name = "openButton";
-            this.openButton.Size = new System.Drawing.Size(75, 23);
+            this.openButton.Size = new System.Drawing.Size(94, 23);
             this.openButton.TabIndex = 0;
-            this.openButton.Text = "Open";
+            this.openButton.Text = "Choose Folder...";
             this.openButton.UseVisualStyleBackColor = true;
             this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
             // goButton
             // 
-            this.goButton.Location = new System.Drawing.Point(248, 237);
+            this.goButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.goButton.Location = new System.Drawing.Point(137, 56);
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(75, 23);
+            this.goButton.Size = new System.Drawing.Size(171, 76);
             this.goButton.TabIndex = 1;
-            this.goButton.Text = "Go";
+            this.goButton.Text = "GO!";
             this.goButton.UseVisualStyleBackColor = true;
             this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
             // cppRadioButton
             // 
             this.cppRadioButton.AutoSize = true;
-            this.cppRadioButton.Location = new System.Drawing.Point(46, 216);
+            this.cppRadioButton.Checked = true;
+            this.cppRadioButton.Location = new System.Drawing.Point(11, 52);
             this.cppRadioButton.Name = "cppRadioButton";
             this.cppRadioButton.Size = new System.Drawing.Size(44, 17);
             this.cppRadioButton.TabIndex = 2;
@@ -74,17 +81,16 @@
             // asmRadioButton
             // 
             this.asmRadioButton.AutoSize = true;
-            this.asmRadioButton.Location = new System.Drawing.Point(46, 240);
+            this.asmRadioButton.Location = new System.Drawing.Point(60, 52);
             this.asmRadioButton.Name = "asmRadioButton";
             this.asmRadioButton.Size = new System.Drawing.Size(48, 17);
             this.asmRadioButton.TabIndex = 3;
-            this.asmRadioButton.TabStop = true;
             this.asmRadioButton.Text = "ASM";
             this.asmRadioButton.UseVisualStyleBackColor = true;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(46, 178);
+            this.numericUpDown1.Location = new System.Drawing.Point(62, 23);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             64,
             0,
@@ -107,51 +113,64 @@
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog1";
+            this.openFileDialog.Multiselect = true;
             // 
             // threadLabel
             // 
             this.threadLabel.AutoSize = true;
-            this.threadLabel.Location = new System.Drawing.Point(46, 159);
+            this.threadLabel.Location = new System.Drawing.Point(6, 25);
             this.threadLabel.Name = "threadLabel";
             this.threadLabel.Size = new System.Drawing.Size(49, 13);
             this.threadLabel.TabIndex = 5;
             this.threadLabel.Text = "Threads:";
             // 
-            // testLabel
+            // optionsGroupBox
             // 
-            this.testLabel.AutoSize = true;
-            this.testLabel.Location = new System.Drawing.Point(331, 55);
-            this.testLabel.Name = "testLabel";
-            this.testLabel.Size = new System.Drawing.Size(35, 13);
-            this.testLabel.TabIndex = 6;
-            this.testLabel.Text = "label1";
+            this.optionsGroupBox.Controls.Add(this.threadLabel);
+            this.optionsGroupBox.Controls.Add(this.numericUpDown1);
+            this.optionsGroupBox.Controls.Add(this.cppRadioButton);
+            this.optionsGroupBox.Controls.Add(this.asmRadioButton);
+            this.optionsGroupBox.Location = new System.Drawing.Point(12, 51);
+            this.optionsGroupBox.Name = "optionsGroupBox";
+            this.optionsGroupBox.Size = new System.Drawing.Size(119, 81);
+            this.optionsGroupBox.TabIndex = 8;
+            this.optionsGroupBox.TabStop = false;
+            this.optionsGroupBox.Text = "Options";
             // 
-            // testButton
+            // folderPathTextBox
             // 
-            this.testButton.Location = new System.Drawing.Point(334, 89);
-            this.testButton.Name = "testButton";
-            this.testButton.Size = new System.Drawing.Size(75, 23);
-            this.testButton.TabIndex = 7;
-            this.testButton.Text = "button1";
-            this.testButton.UseVisualStyleBackColor = true;
-            this.testButton.Click += new System.EventHandler(this.testButton_Click);
+            this.folderPathTextBox.Location = new System.Drawing.Point(12, 25);
+            this.folderPathTextBox.Name = "folderPathTextBox";
+            this.folderPathTextBox.Size = new System.Drawing.Size(196, 20);
+            this.folderPathTextBox.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Input folder path:";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 450);
-            this.Controls.Add(this.testButton);
-            this.Controls.Add(this.testLabel);
-            this.Controls.Add(this.threadLabel);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.asmRadioButton);
-            this.Controls.Add(this.cppRadioButton);
+            this.ClientSize = new System.Drawing.Size(320, 145);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.folderPathTextBox);
+            this.Controls.Add(this.optionsGroupBox);
             this.Controls.Add(this.goButton);
             this.Controls.Add(this.openButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Text = "A*";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.optionsGroupBox.ResumeLayout(false);
+            this.optionsGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,8 +185,10 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Label threadLabel;
-        private System.Windows.Forms.Label testLabel;
-        private System.Windows.Forms.Button testButton;
+        private System.Windows.Forms.GroupBox optionsGroupBox;
+        private System.Windows.Forms.TextBox folderPathTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
     }
 }
 

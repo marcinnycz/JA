@@ -9,14 +9,17 @@ namespace AStar
 {
     static class Program
     {
-        private const string dll_name = "AStarASM.dll";
+        /*[DllImport("AStarASM.dll")]
+        public static extern int calculateDistanceAsm(int x1, int x2, int y1, int y2);
 
-        /*[DllImport(dll_name, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int calculateDistance(int x1, int x2, int y1, int y2);
-        */
+        [DllImport("AStarCPP.dll")]
+        public static extern int calculateDistanceCpp(int x1, int x2, int y1, int y2);*/
 
-        [DllImport(dll_name, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int calculateDistance(int x1, int x2, int y1, int y2);
+        [DllImport("AStarCPP.dll")]
+        public static extern void calculateHDistanceCpp(int endX, int endY, int[] hArray);
+
+        [DllImport("AStarASM.dll")]
+        public static extern int calculateHDistanceAsm(int endX, int endY, int[] hArray);
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

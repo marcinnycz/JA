@@ -39,6 +39,9 @@ namespace AStar
         private void InitializeComponent()
         {
             this.closeButton = new System.Windows.Forms.Button();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.numericUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // closeButton
@@ -51,21 +54,59 @@ namespace AStar
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // timeLabel
+            // 
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Location = new System.Drawing.Point(138, 516);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(33, 13);
+            this.timeLabel.TabIndex = 1;
+            this.timeLabel.Text = "TIME";
+            // 
+            // numericUpDown
+            // 
+            this.numericUpDown.Location = new System.Drawing.Point(12, 514);
+            this.numericUpDown.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown.Name = "numericUpDown";
+            this.numericUpDown.Size = new System.Drawing.Size(47, 20);
+            this.numericUpDown.TabIndex = 2;
+            this.numericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
             // Result
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 546);
+            this.Controls.Add(this.numericUpDown);
+            this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.closeButton);
             this.Name = "Result";
             this.Text = "Result";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button closeButton;
+        private Label timeLabel;
+        private NumericUpDown numericUpDown;
     }
 
 }

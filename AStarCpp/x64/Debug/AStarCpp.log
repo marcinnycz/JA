@@ -1,5 +1,6 @@
-﻿  dllmain.cpp
+﻿  pch.cpp
+  dllmain.cpp
   main.cpp
   Generating Code...
-     Creating library C:\Users\mnycz\source\repos\AStar\x64\Debug\AStarCpp.lib and object C:\Users\mnycz\source\repos\AStar\x64\Debug\AStarCpp.exp
-  AStarCpp.vcxproj -> C:\Users\mnycz\source\repos\AStar\x64\Debug\AStarCpp.dll
+     Creating library C:\Users\mnycz\source\repos\JA2\x64\Debug\AStarCpp.lib and object C:\Users\mnycz\source\repos\JA2\x64\Debug\AStarCpp.exp
+  AStarCpp.vcxproj -> C:\Users\mnycz\source\repos\JA2\x64\Debug\AStarCpp.dll

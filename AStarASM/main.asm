@@ -2,8 +2,8 @@ PUBLIC calculateHDistanceAsm
 
 .data
 
-rbxSave dq 0
-r12Save dq 0
+rbxSave dq 0                ;Deklaracja zmiennej przechowuj¹cej wartoœæ rejestru rbx
+r12Save dq 0                ;Deklaracja zmiennej przechowuj¹cej wartoœæ rejestru r12
 
 .code 
 
@@ -20,7 +20,7 @@ mov r12Save, r12            ;Zapisanie wartoœci rejstru r12
 
 mov rbx, 0                  ;Zerowanie rejestru przechowuj¹cego offset wskaŸnika tablicy wynikowej
 
-                            ;Pêtla zagnie¿d¿ona, przechodz¹ca po wspó³¿êdnych wszystkich punktów na planszy
+                            ;Pêtla zagnie¿d¿ona, przechodz¹ca po wspó³rzêdnych wszystkich punktów na planszy
     mov r9, 0               ;Zerowanie rejestru licznika pêtli zewnêtrznej
 r9_loop:                    ;Pocz¹tek pêtli zewnêtrznej
     mov r10, 0              ;Zerowanie rejestru licznika pêtli wewnêtrznej
@@ -63,10 +63,10 @@ rdx_is_bigger2:
     mov [r8 + rbx], rax     ;Zapisanie wyniku do tablicy
     add rbx, 4              ;Przesuniêcie wskaŸnika tablicy
 
-    mov rcx, r9             ;Odzyskanie wartoœci wspó³rzêdnej X punktu koñcowego
-    mov rdx, r10            ;Odzyskanie wartoœci wspó³rzêdnej Y punktu koñcowego
-    mov r9, r11             ;Odzyskanie wartoœci licznika pêtli zewnêtrznej
-    mov r10, r12            ;Odzyskanie wartoœci licznika pêtli wewnêtrznej
+    mov rcx, r9             ;Przywrócenie wartoœci wspó³rzêdnej X punktu koñcowego
+    mov rdx, r10            ;Przywrócenie wartoœci wspó³rzêdnej Y punktu koñcowego
+    mov r9, r11             ;Przywrócenie wartoœci licznika pêtli zewnêtrznej
+    mov r10, r12            ;Przywrócenie wartoœci licznika pêtli wewnêtrznej
     
     add r10, 1              ;Inkrementacja licznika pêtli wewnêtrznej
     cmp r10, 50             ;Koniec pêtli wewnêtrznej
@@ -84,21 +84,28 @@ rdx_is_bigger2:
 calculateHDistanceAsm ENDP
 
 
-
+                            ;Funkcja testuj¹ca dzia³anie instrukcji typu SIMD
+                            ;Funkcja dodaje do siebie dwie tablice zmiennych zmiennoprzecinkowych pojedynczej precyzji (float)
+                            ;Przyjmuje 4 argumenty
+                            ;Arg1: wskaŸnik na pierwsz¹ tablicê danych - rejestr rcx
+                            ;Arg2: wskaŸnik na drug¹ tablicê danych - rejestr rdx
+                            ;Arg3: wskaŸnik na tablicê wynikow¹ - rejestr r8
+                            ;Arg4: rozmiar tablic (w bajtach) - rejestr r9
+                            ;Wynik zapisywany jest w tablicy z Arg3
 SIMDExample PROC
 
-    mov rax, 0
+    mov rax, 0              ;Zerowanie licznika pêtli
 
-raxLoop:
-    movups xmm0, [rcx + rax]
-    movups xmm1, [rdx + rax]
-    addps xmm0, xmm1
-    movdqu [r8 + rax], xmm0
-    add rax, 16
-    cmp rax, r9
+raxLoop:                    ;Pocz¹tek pêtli
+    movups xmm0, [rcx + rax];Wczytanie 4 wartoœci typu float do rejestru xmm0
+    movups xmm1, [rdx + rax];Wczytanie 4 wartoœci typu float do rejestru xmm1
+    addps xmm0, xmm1        ;Jednoczesne sumowanie wszystkich 4 wartoœci
+    movdqu [r8 + rax], xmm0 ;Zapisanie wyniku do tablicy
+    add rax, 16             ;Inkrementacja licznika
+    cmp rax, r9             ;Koniec pêtli
     jne raxLoop
 
-    ret
+    ret                     ;Koniec procedury
 
 SIMDExample ENDP
 

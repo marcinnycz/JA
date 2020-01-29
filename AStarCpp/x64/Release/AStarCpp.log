@@ -1,0 +1,7 @@
+﻿  pch.cpp
+  dllmain.cpp
+  main.cpp
+     Creating library C:\Users\mnycz\source\repos\JA2\x64\Release\AStarCpp.lib and object C:\Users\mnycz\source\repos\JA2\x64\Release\AStarCpp.exp
+  Generating code
+  Finished generating code
+  AStarCpp.vcxproj -> C:\Users\mnycz\source\repos\JA2\x64\Release\AStarCpp.dll

@@ -43,7 +43,7 @@ namespace AStar
             }
         }
 
-        //Funkcja konwertująca współżędne na indeks tabeli
+        //Funkcja konwertująca współrzędne na indeks tabeli
         private int conv(int x, int y)
         {
             return x * 50 + y;
@@ -58,7 +58,7 @@ namespace AStar
             //Dla każdel planszy
             foreach (List<Point> li in list)
             {
-                //Stworzenie zmiennych przechowujących współżędne punktu startowego i końcowego
+                //Stworzenie zmiennych przechowujących współrzędne punktu startowego i końcowego
                 int startX = li[0].X;
                 int startY = li[0].Y;
                 int endX = li[1].X;
@@ -295,7 +295,7 @@ namespace AStar
                             //Licznik ilości pobranych punktów. Maksymalnie 2500.
                             int counter = 0;
 
-                            //Zmienne przechowujące dane o współżędnych i separatorach 
+                            //Zmienne przechowujące dane o współrzędnych i separatorach 
                             Point start = new Point();
                             Point end = new Point();
                             int separator;
@@ -309,13 +309,13 @@ namespace AStar
                             //Odczyt danych
                             while (!sr.EndOfStream || counter >= 2500)
                             {
-                                //Odczyt pierwszej współżędnej
+                                //Odczyt pierwszej współrzędnej
                                 sr.ReadBlock(number1, 0, 2);
 
                                 //Odczyt separatora
                                 separator = sr.Read();
 
-                                //Odczyt drugiej współżędnej
+                                //Odczyt drugiej współrzędnej
                                 sr.ReadBlock(number2, 0, 2);
 
                                 //Odczyt znaku nowej linii
@@ -332,7 +332,7 @@ namespace AStar
 
                                 try
                                 {
-                                    //Konwersja wartości współżędnych do zmiennej typu Point
+                                    //Konwersja wartości współrzędnych do zmiennej typu Point
                                     intNumber1 = Int32.Parse(new String(number1));
                                     intNumber2 = Int32.Parse(new String(number2));
                                     Point p = new Point(intNumber1, intNumber2);
@@ -363,7 +363,7 @@ namespace AStar
                                 }
                                 catch (Exception)
                                 { 
-                                    //Sprawdzenie poprawności wartości współżędnych
+                                    //Sprawdzenie poprawności wartości współrzędnych
                                     System.Windows.Forms.MessageBox.Show("Plik: " + file + "\nNiepoprawne dane punktu. Wartości punktu powinny należeć to zakresu od 00 do 49.", "ERROR");
                                     dataError = true;
                                     break;
@@ -485,6 +485,7 @@ namespace AStar
             DialogResult result = folderBrowserDialog.ShowDialog();
             if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowserDialog.SelectedPath))
             {
+                //Wpisanie wybranej ścieżki do pola edycji
                 folderPathTextBox.Text = folderBrowserDialog.SelectedPath;
             }
         }
@@ -516,7 +517,7 @@ namespace AStar
             return result;
         }
 
-        //Ukryta metoda wywołująca test instrukcji SIMD
+        //Metoda wywołująca test instrukcji SIMD
         private void threadLabel_Click(object sender, EventArgs e)
         {
             String result = "";
@@ -546,7 +547,7 @@ namespace AStar
             threadCount = numberOfThreads;
         }
 
-        //Funkcja zwracająca listę z danymi
+        //Funkcja zwracająca listę z danymi z tablicy podanej w parametrze, pod indeksem równym threadNumber
         //Zabezpieczona w przypadku próby dostępu przez kilka wątków na raz
         public List<List<Point>> getList(List<List<Point>>[] listArray)
         {

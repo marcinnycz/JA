@@ -41,6 +41,7 @@ namespace AStar
             this.closeButton = new System.Windows.Forms.Button();
             this.timeLabel = new System.Windows.Forms.Label();
             this.numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@ namespace AStar
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
-            this.timeLabel.Location = new System.Drawing.Point(138, 516);
+            this.timeLabel.Location = new System.Drawing.Point(245, 516);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(33, 13);
             this.timeLabel.TabIndex = 1;
@@ -65,7 +66,7 @@ namespace AStar
             // 
             // numericUpDown
             // 
-            this.numericUpDown.Location = new System.Drawing.Point(12, 514);
+            this.numericUpDown.Location = new System.Drawing.Point(106, 514);
             this.numericUpDown.Maximum = new decimal(new int[] {
             1,
             0,
@@ -86,11 +87,21 @@ namespace AStar
             0});
             this.numericUpDown.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 516);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Data set number:";
+            // 
             // Result
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 546);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.closeButton);
@@ -107,6 +118,7 @@ namespace AStar
         private System.Windows.Forms.Button closeButton;
         private Label timeLabel;
         private NumericUpDown numericUpDown;
+        private Label label1;
     }
 
 }

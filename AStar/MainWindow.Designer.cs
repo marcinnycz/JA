@@ -123,6 +123,7 @@
             this.threadLabel.Size = new System.Drawing.Size(49, 13);
             this.threadLabel.TabIndex = 5;
             this.threadLabel.Text = "Threads:";
+            this.threadLabel.Click += new System.EventHandler(this.threadLabel_Click);
             // 
             // optionsGroupBox
             // 
@@ -167,7 +168,6 @@
             this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Text = "A*";
-            this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.optionsGroupBox.ResumeLayout(false);
             this.optionsGroupBox.PerformLayout();
